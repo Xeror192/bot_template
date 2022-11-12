@@ -3,9 +3,10 @@ EXECFLAGS = -u www-data
 
 install:
 	chmod -R 777 entrypoint.sh
-	mkdir vendor var
+	mkdir vendor var data
 	chmod -R 777 vendor
 	chmod -R 777 var
+	chmod -R 777 data
 	docker network create guru
 	cp -n .env.orig .env
 	cp -n docker-compose.yml.dev docker-compose.yml
@@ -73,23 +74,6 @@ shell:
 	docker-compose exec phpfpm bash
 .PHONY: shell
 
-
 composer-optimize:
 	docker-compose exec -T phpfpm sh -c "composer dump-autoload --classmap-authoritative"
 .PHONY: composer-optimize
-
-create-days:
-	docker-compose exec -T phpfpm sh -c "php bin/console nails:create:working-day"
-.PHONY: create-days
-
-notification-send:
-	docker-compose exec -T phpfpm sh -c "php bin/console nails:send:notification"
-.PHONY: notification-send
-
-test:
-	docker-compose exec -T phpfpm sh -c 'PATH_TO_PROJECT=$(PATH_TO_PROJECT) php vendor/bin/phpunit'
-.PHONY: test
-
-test-inside:
-	PATH_TO_PROJECT=$(PATH_TO_PROJECT) php vendor/bin/phpunit --verbose $(TEST_NAME)
-.PHONY: test-inside
