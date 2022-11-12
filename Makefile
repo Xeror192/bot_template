@@ -3,6 +3,7 @@ EXECFLAGS = -u www-data
 
 install:
 	chmod -R 777 entrypoint.sh
+	chmod -R 777 download-lets-data.sh
 	mkdir vendor var data
 	chmod -R 777 vendor
 	chmod -R 777 var
