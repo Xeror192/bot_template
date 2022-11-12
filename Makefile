@@ -6,7 +6,7 @@ install:
 	mkdir vendor var
 	chmod -R 777 vendor
 	chmod -R 777 var
-	docker network create diana
+	docker network create guru
 	cp -n .env.orig .env
 	cp -n docker-compose.yml.dev docker-compose.yml
 	make build
