@@ -1,0 +1,7 @@
+bot:
+    resource: ../../src/Bot/UI/Http/Controller
+    type: annotation
+    prefix: /bot
+kernel:
+    resource: ../../src/Kernel.php
+    type: annotation
