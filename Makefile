@@ -50,7 +50,7 @@ routes:
 .PHONY: routes
 
 doctrine-migrations-migrate:
-	docker-compose exec -T phpfpm sh -c "php bin/console doctrine:migrations:migrate"
+	docker-compose exec -T phpfpm sh -c "php bin/console --no-interaction doctrine:migrations:migrate"
 .PHONY: doctrine-migrations-migrate
 
 doctrine-migrations-diff:

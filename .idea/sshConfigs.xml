@@ -6,6 +6,7 @@
       <sshConfig host="176.53.161.108" id="858fa4b3-8a68-42fc-9c4c-3962f502d6b3" keyPath="$USER_HOME$/.ssh/id_rsa" port="22" nameFormat="DESCRIPTIVE" username="root" useOpenSSHConfig="true" />
       <sshConfig host="89.223.65.177" id="0c954d25-f896-4e07-8ee5-adb955d12fe2" keyPath="$USER_HOME$/.ssh/id_rsa" port="22" nameFormat="DESCRIPTIVE" username="root" useOpenSSHConfig="true" />
       <sshConfig host="92.255.107.144" id="dc245b9a-cbee-4407-bc42-7c1f833489f5" keyPath="$USER_HOME$/.ssh/id_rsa" port="22" nameFormat="DESCRIPTIVE" username="root" useOpenSSHConfig="true" />
+      <sshConfig host="2.59.40.200" id="62d4f0d0-a09e-4f81-89ff-37e16a681d12" keyPath="$USER_HOME$/.ssh/id_rsa" port="22" nameFormat="DESCRIPTIVE" username="root" useOpenSSHConfig="true" />
     </configs>
   </component>
 </project>

@@ -53,18 +53,8 @@ RUN docker-php-ext-configure intl --enable-intl && \
         exif opcache \
     && docker-php-source delete
 
-RUN docker-php-ext-install exif gd
-
 RUN pecl install -o -f redis \
 &&  rm -rf /tmp/pear \
 &&  docker-php-ext-enable redis
 
-#RUN apt-get update &&\
-#    apt-get install -qy libfann-dev &&\
-#    rm -r /var/lib/apt/lists/* &&\
-#    pecl install fann &&\
-#    docker-php-ext-enable fann
-
-#COPY . .
-#RUN composer install --no-cache  --no-scripts
 ENTRYPOINT ["./entrypoint.sh"]
